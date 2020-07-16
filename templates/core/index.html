@@ -1,0 +1,153 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+{% include 'core/nav.html' %}
+    <div class="header" id="home">
+      {% for message in messages %}
+      <h4 style="color:crimson; font-size:1.5rem;">{{ message }}</h4>
+      {% endfor %}
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Marko Ventures</span>
+                <span class="heading-primary--sub">Quality Services Guaranteed</span>
+            </h1>
+
+        </div>
+    </div>
+
+    <main>
+        <section class="section-about" id="section-about">
+
+           <div class="u-center-text u-margin-bottom--big">
+                <h2 class="heading-secondary">
+                    Our Business
+                </h2>
+           </div>
+           <div class="grid--two">
+               <div class="col-1-of-2">
+                    <h2 class="heading-tertiary u-margin-bottom--small">Our Activities</h2>
+                    <p class="paragraph">
+                      Marko Agro Ventures is a high network organization involved seriously in the cultivation, harvesting, processing, storage, distribution and supply of a variety of food and cash crops that are found within Sub – Saharan Africa.
+                    </p>
+
+
+                    <a href="{% url 'core:business' %}" class="btn--text">learn more &rarr;</a>
+                </div>
+
+              <div class="row">
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <img src="{% static 'images/marko-index-photo2.jpg' %}" alt="Photo 1" class="composition__photo composition__photo--p1"/>
+                        <img src="{% static 'images/marko-photo4.jpg' %}" alt="Photo 2" class="composition__photo composition__photo--p2"/>
+                        <img src="{% static 'images/marko-photo6.jpg' %}" alt="Photo 3" class="composition__photo composition__photo--p3"/>
+                     </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+
+        <section class="section-products" id="section-products">
+
+            <div class="u-center-text u-margin-bottom--big">
+                <h2 class="heading-secondary">
+                    some of our products
+                </h2>
+           </div>
+
+            <div class="row u-margin-bottom--big">
+                <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--1"> Animal Husbandry </span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                Farm animals breeding and rearing for various purposes is one stronghold for us at Marko Agro Ventures. This is simply because of the passion with which our animal care givers “ who are highly specialised in the service” tend to our animals with the purpose of encouraging regular growth and development of the vast variety and species of farm animals.
+                               </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--2">Cash Crop</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                 Oil Palm: Oil palm is a  high sort after cash crop whose economic value can never be over emphasized because every part of the plant can  be / is used for something therefore making it all valuable.
+                                 At Marko Agro , With the facilities, state of art equipments and specialised human resources, we involve in the cultivation and processing of the palm fruits to get the best quality palm oil.
+
+                              </p>
+                              </div>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--3">Food Crop</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                Rice is a staple food and also cash crops that every household and a good number of industries demand demand and consume regularly and in high quantity and volumes. Marko Agro Ventures is presently involved in the processing, packaging and supply of the highest quality premium rice grains, rich in fibre and bran.
+                               </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--4">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--4">Farm Services</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                We have placed a set of services and tools for farmers at your disposal to help 
+                                make your day-to-day work easier, so feel free to consult us on any  topic, 
+                                aspect or field of interest to you on the overall agricultural value chain. 
+                                We are fully grounded with experienced, friendly specialists who are easy to communicate with.
+                              </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+            </div>
+            <div class="u-center-text ">
+                <a href="{% url 'core:category' %}" class="btn btn--green btn--cta btn--animated">Discover More</a>
+            </div>
+        </section>
+    </main>
+    {% include 'core/footer.html'%}
+    {% endblock content %}
