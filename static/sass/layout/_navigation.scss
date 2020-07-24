@@ -8,7 +8,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: rgba($color-secondary,1);
+    background: rgba($color-primary,1);
     padding: 1rem 2rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 
@@ -30,7 +30,18 @@
        margin-left: 2.5rem;
     }
     .logo{
-        width: 5.5rem;
+
+        &:link,
+        &:visited{
+            font-family: forte;
+            letter-spacing: 1.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-white;
+            width: 5.5rem;
+            font-size: 1.6rem;
+        }
+      
     }
 
     &__nav{
@@ -56,7 +67,7 @@
     &__link{
         padding: 1rem;
         text-decoration: none;
-        color: $color-primary-dark;
+        color: $color-white;
         letter-spacing: .3rem;
     }
     &__check{
@@ -92,7 +103,7 @@
         width: 3rem;
         height: 5px;
         margin: 3px 0;
-        background:$color-primary-dark;
+        background:$color-white;
     }
 
  
@@ -101,9 +112,12 @@
 
 .background{
     position: fixed;
-    display:none;
-    background: radial-gradient($color-primary-dark,$color-primary);
-    clip-path: circle(50px at 100% 0%);
+    // display:none;  
+    visibility: hidden; 
+    background: radial-gradient(
+        lighten($color-secondary,20%),
+        $color-secondary);
+    clip-path: circle(30px at 90% 0%);
     width: 100%;
     height: 100vh;
     z-index: 999;
@@ -114,6 +128,7 @@
     @include respond (tab-port){
         display: grid;
         place-items: center;
+
     }
 
     &__place-center{
@@ -150,7 +165,7 @@
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-primary-dark;
+            color: $color-secondary;
             transform: translateX(1rem);
         }
     }
@@ -161,7 +176,9 @@
 }
 
 .in{
+   visibility: visible;
     clip-path: circle(1200px at 100% 0%);
+   
 }    
 
 

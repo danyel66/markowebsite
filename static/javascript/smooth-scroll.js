@@ -520,7 +520,7 @@
 		var popstateHandler = function (event) {
 			// Stop if history.state doesn't exist (ex. if clicking on a broken anchor link).
 			// fixes `Cannot read property 'smoothScroll' of null` error getting thrown.
-			if (history.state === null) return;
+			if (history.state === null) return; 
 
 			// Only run if state is a popstate record for this instantiation
 			if (!history.state.smoothScroll || history.state.smoothScroll !== JSON.stringify(settings)) return;

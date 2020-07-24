@@ -1,0 +1,346 @@
+/*
+
+0 - 600px:      Phone;
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200-1800] is where normal styles apply
+1800px + : Big Desktop
+
+
+$breakpoint argument choices: 
+- phone
+- tab-port
+- tab-land
+-big-desktop
+*/
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom--big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom--medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom--small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom--smallest {
+  margin-bottom: .3rem !important;
+}
+
+.u-z-index {
+  z-index: -1;
+}
+
+.u-rotate-back {
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+.u-rotate-front {
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #777;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 2rem;
+  font-weight: 400;
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@media (max-width: 600px) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
+
+.heading-primary--sub {
+  font-weight: 400;
+  display: block;
+  font-size: 2.3rem;
+  letter-spacing: 1.7rem;
+  -webkit-animation-name: moveInRight;
+          animation-name: moveInRight;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@media (max-width: 600px) {
+  .heading-primary--sub {
+    letter-spacing: .5rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: -webkit-gradient(linear, right top, left top, from(#ff4d7f), to(#cc003a));
+  background: linear-gradient(to left, #ff4d7f, #cc003a);
+  display: inline-block;
+  color: transparent;
+  letter-spacing: .2rem;
+  -webkit-background-clip: text;
+}
+
+@media (max-width: 900px) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 54.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 43%;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    background: #f7f7f7;
+  }
+}
+
+.business {
+  background: #f7f7f7;
+}
+
+.business__hero {
+  width: 100%;
+  height: 60vh;
+  background: #ff0048;
+  background-image: url("../images/house-4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.business__hero--left {
+  width: 60%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.9);
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+}
+
+@media (max-width: 600px) {
+  .business__hero--left {
+    width: 85%;
+  }
+}
+
+.business__text-box {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+@media (max-width: 1200px) {
+  .business__text-box {
+    width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .business__text-box {
+    left: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .business__text-box {
+    top: 70%;
+    width: 250px;
+  }
+}
+
+.business__text-box p {
+  font-size: 1.3rem;
+  width: 70%;
+  color: #f7f7f7;
+}
+
+.business__header {
+  text-transform: uppercase;
+  color: #ff4d7f;
+  font-size: 4.5rem;
+}
+
+.business__header--main {
+  display: block;
+  margin-bottom: -3rem;
+  letter-spacing: .4rem;
+}
+
+.business__header--sub {
+  font-size: 3rem;
+  letter-spacing: 1.5rem;
+}
+
+.business__content h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.business__main {
+  width: 100%;
+}
+
+.business__main--card {
+  width: 85%;
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .business__main--card {
+    width: 100%;
+  }
+}
+
+.business__shape {
+  width: 15rem;
+  height: 15rem;
+  background: #111;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem);
+          transform: translateX(-3rem);
+}
+
+.business__text--header {
+  text-decoration: underline;
+}
+
+.business__consultancy {
+  width: 85%;
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .business__consultancy {
+    width: 100%;
+  }
+}
+
+.business__consultancy ul {
+  padding-left: 2rem;
+}
+
+.business__consultancy ul li {
+  list-style: square;
+}
+/*# sourceMappingURL=business.css.map */

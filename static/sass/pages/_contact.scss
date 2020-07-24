@@ -64,9 +64,9 @@
                         color: $color-white;
                         text-transform: capitalize;
                         text-align: center;
-                        background:$color-primary-dark;
+                        background:$color-primary-light;
                         border-radius: 100px;
-                        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-secondary 50%);
+                        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary-dark 50%);
                         background-size: 220%;
                         transition: all .4s;
 
@@ -87,7 +87,7 @@
                     &:hover,
                     &:active {
                         background-position: 100%;
-                        color: $color-primary-dark;
+                        color: $color-white;
                         transform: translateX(1rem);
                     }
                 }
@@ -95,8 +95,8 @@
         }
     }
     &__image{
-        background-image: url("../images/realtor-2.jpeg");
+        background-image: url("../images/realtor-3.jpeg");
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
     }
 }

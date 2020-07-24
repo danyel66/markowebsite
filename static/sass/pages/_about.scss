@@ -1,0 +1,35 @@
+.abt{
+    width: 100%;
+    height: fit-content;
+    background: $color-grey-light-1;
+
+    
+
+    &__header{
+        position: relative;
+        background:linear-gradient(
+            to left bottom,
+            $color-primary-dark,
+            $color-primary
+        );
+        width: inherit;
+        height: 50vh;
+
+        &__text-box{
+            @include AbsCenter;
+        }
+    }
+
+    &__content{
+        width: 90%;
+        margin: 0 auto;
+
+        p{
+            margin:0 auto ;
+            width: 90%;
+            text-align: justify;
+            font-size: 1.5rem;
+            color:$color-secondary;
+        }
+    }
+}
