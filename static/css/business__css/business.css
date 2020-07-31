@@ -210,9 +210,10 @@ body {
   width: 100%;
   height: 60vh;
   background: #ff0048;
-  background-image: url("../images/house-4.jpeg");
+  background-image: url("../../images/marko-photo8.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 75%;
 }
 
 .business__hero--left {
@@ -315,6 +316,11 @@ body {
   clip-path: circle(50% at 50% 50%);
   -webkit-transform: translateX(-3rem);
           transform: translateX(-3rem);
+}
+
+.business__shape img {
+  width:100%; 
+  padding: 1.5rem;
 }
 
 .business__text--header {

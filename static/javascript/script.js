@@ -15,7 +15,7 @@ document.querySelector('.background__link').addEventListener('click',()=>{
 var slideIndex = 0;
 showSlides();
 
-function showSlides(n) {
+function showSlides() {
     var i;
     var slides = document.getElementsByClassName("slideshow__slides");
 
